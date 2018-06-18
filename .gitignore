@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# misc directories
+dist
+.vscode
+
 # Runtime data
 pids
 *.pid

@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/css/themeA.css":
+/***/ "./src/css/themeB.css":
 /*!****************************!*\
-  !*** ./src/css/themeA.css ***!
+  !*** ./src/css/themeB.css ***!
   \****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/css/themeA.css?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/css/themeB.css?");
 
 /***/ }),
 
@@ -101,11 +101,11 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! theme */ \"./src/css/themeA.css\");\n/* harmony import */ var theme__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(theme__WEBPACK_IMPORTED_MODULE_0__);\n// const wp = require(\"webpack\");\n\nconsole.log(\"themeA\");\n\n\ndebugger;\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! theme */ \"./src/css/themeB.css\");\n\n// const wp = require(\"webpack\");\n\nconsole.log(\"themeB\");\n\n\ndebugger;\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
