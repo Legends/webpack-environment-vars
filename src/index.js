@@ -3,4 +3,9 @@
 console.log(theme);
 import "theme"
 
-debugger;  
+// if you want to import the style dynamically
+if (true) {
+    require("themeB")
+} else {
+    require("themeA")
+}

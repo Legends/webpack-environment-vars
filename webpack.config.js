@@ -19,6 +19,7 @@ module.exports = (env) => {
         theme = "./src/css/" + env.theme + ".css"
     }
     console.log(path.resolve(theme));
+    console.log(process.env.theme);
 
     return {
         entry: './src/index.js',
@@ -28,8 +29,13 @@ module.exports = (env) => {
         },
         resolve: {
             alias: {
-                "theme$": path.resolve(theme)
+                "theme$": path.resolve(theme),
+                "themeA$": path.resolve("./src/css/themeA.css"),
+                "themeB$": path.resolve("./src/css/themeB.css")
             }
+        },
+        optimization: {
+            runtimeChunk: true
         },
         module: {
             rules: [{
@@ -38,7 +44,7 @@ module.exports = (env) => {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: "env"// ['@babel/preset-env']
+                        presets: "env" // ['@babel/preset-env']
                     }
                 }
             }, {
@@ -69,18 +75,8 @@ module.exports = (env) => {
             //         source: false
             //     }
             // }),
-            // if you must, use the providerPlugin for shimming:
-            // Used when you have i.e. jQuery plugins that rely on availability of the global $ variable to be present
-            // which in modular JS is not the case. shimming is therefore not recommended as it pollutes the global namespace
-            // https://webpack.js.org/guides/shimming/
-            // new webpack.ProvidePlugin({
-            //     $: "jquery",
-            //     jQuery: "jquery",
-            //     "window.jQuery": "jquery"
-            // }),
             new CleanWebpackPlugin(distfolder), // deletes the dist folder before new build starts
-            // https://webpack.js.org/plugins/context-replacement-plugin/
-            // ContextReplacementPlugin: Moment.js https://stackoverflow.com/a/25426019/2581562
+
             new MiniCssExtractPlugin({
                 // Options similar to the same options in webpackOptions.output
                 // both options are optional
@@ -90,4 +86,4 @@ module.exports = (env) => {
             new HtmlWebpackPlugin()
         ]
     }
-}; 
+};
